@@ -1,5 +1,8 @@
 # RiceStress
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24071671.svg)](https://doi.org/10.5281/zenodo.24071671)
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+
 Spatial modeling scripts for assessing daily rice heat stress incidence (daytime and nighttime heat stress across reproductive and flowering stages) using Copernicus AgERA5 daily weather rasters and rice crop calendar polygons.
 
 ---
@@ -133,6 +136,26 @@ Written to `OUTPUT_DIR` (`./out/<DTH|NTH>_AgERA5_Daily/`):
 
 ---
 
+## Citation
+
+If you use this software in your research, please cite it as:
+
+```bibtex
+@software{aunario_ricestress_2026,
+  author       = {Aunario, Jorrel Khalil S.},
+  title        = {RiceStress: Daily Rice Heat Stress Incidence Mapping with AgERA5},
+  month        = nov,
+  year         = 2026,
+  publisher    = {Zenodo},
+  version      = {v1.0.0},
+  doi          = {10.5281/zenodo.24071671},
+  url          = {https://doi.org/10.5281/zenodo.24071671}
+}
+```
+
+---
+
 ## License
 
 This work is dedicated to the public domain under the [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](LICENSE).
+

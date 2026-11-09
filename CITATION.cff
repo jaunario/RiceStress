@@ -6,6 +6,7 @@ authors:
     orcid: ""
 title: "RiceStress: Daily Rice Heat Stress Incidence Mapping with AgERA5"
 version: 1.0.0
+doi: 10.5281/zenodo.24071671
 date-released: 2026-11-09
 url: "https://github.com/jaunario/RiceStress"
 keywords:
@@ -16,3 +17,4 @@ keywords:
   - agriculture
   - climate change
 license: CC0-1.0
+
