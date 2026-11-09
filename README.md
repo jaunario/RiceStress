@@ -3,7 +3,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24071671.svg)](https://doi.org/10.5281/zenodo.24071671)
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 
-Spatial modeling scripts for assessing daily rice heat stress incidence (daytime and nighttime heat stress across reproductive and flowering stages) using Copernicus AgERA5 daily weather rasters and rice crop calendar polygons.
+Spatial modeling scripts for assessing seasonal rice heat stress incidence (daytime and nighttime heat stress across reproductive and flowering stages) using Copernicus AgERA5 daily temperature rasters and rice crop calendar polygons.
 
 ---
 
@@ -13,7 +13,7 @@ Spatial modeling scripts for assessing daily rice heat stress incidence (daytime
 | :--- | :--- |
 | `Download_Standardize_AgERA5.R` | Generic R pipeline to download AgERA5 v2.0 daily temperature NetCDF archives from the Copernicus Climate Data Store (CDS) and standardize them into `0.1°` (`6 arcmin`) GeoTIFF rasters (`AGERA5.6arcmin.<tmax\|tmin>.YYYY.MM.DD.tif`, °C $\times 100$, `INT2S`). |
 | `download_agera5.py` | Python downloader (`cdsapi`) invoked by `Download_Standardize_AgERA5.R` or run standalone via CLI. Prompts for the user's CDS Personal Access Token, resolves Areas of Interest (AOI) from bounding boxes, vector files, or filtered Rice Crop Calendar polygons, warns of CDS server limitations, and reuses completed jobs in the user's CDS job history. |
-| `Rice_HeatStress_Daily.R` | Daily rice heat stress mapping engine computing annual threshold-exceedance day counts and multi-year stress incidence frequency from standardized daily weather rasters. |
+| `Rice_HeatStress_Daily.R` | Seasonal rice heat stress mapping engine computing annual threshold-exceedance day counts and multi-year stress incidence frequency from daily weather rasters. |
 
 ---
 
@@ -102,7 +102,7 @@ python3 download_agera5.py \
 
 ---
 
-### Step 2: Run Daily Rice Heat Stress Assessment
+### Step 2: Run Seasonal Rice Heat Stress Assessment
 
 Configure the user settings at the top of `Rice_HeatStress_Daily.R` to point `SRC_DIRECTORY` to the standardized daily GeoTIFF folder (`./agera5_daily`) produced in Step 1:
 
@@ -143,7 +143,7 @@ If you use this software in your research, please cite it as:
 ```bibtex
 @software{aunario_ricestress_2026,
   author       = {Aunario, Jorrel Khalil S.},
-  title        = {RiceStress: Daily Rice Heat Stress Incidence Mapping with AgERA5},
+  title        = {RiceStress: Seasonal Rice Heat Stress Assessment Using Daily Temperature Data},
   month        = nov,
   year         = 2026,
   publisher    = {Zenodo},

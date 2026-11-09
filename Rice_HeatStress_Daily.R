@@ -1,6 +1,6 @@
-# Title: Rice Heat Stress Daily Mapping Engine
+# Title: Seasonal Rice Heat Stress Assessment Engine (Daily Temperature Rasters)
 # Author: Jorrel Khalil Aunario, Avy
-# Description: Dedicated engine to assess rice heat stress incidence (daytime heat / nighttime heat)
+# Description: Dedicated engine to assess seasonal rice heat stress incidence (daytime heat / nighttime heat)
 #              using daily weather rasters (AgERA5). Aligned with the published methodology
 #              for reproductive and flowering phases.
 # Environment & Package Versions:
@@ -93,7 +93,7 @@ resolve_stage_dates <- function(date_plant, date_harv, phase_type, custom_cfg = 
 RUN_SETTING <- get_heat_preset(HEAT_STRESS_TYPE)
 
 message("========================================================")
-message("  Rice Heat Stress Daily Mapping Engine")
+message("  Seasonal Rice Heat Stress Assessment Engine")
 message("  Stress Type   : ", RUN_SETTING$name, " (", RUN_SETTING$variable, " ", RUN_SETTING$comparator, " ", RUN_SETTING$threshold, " C)")
 message("  Day Threshold : >= ", RUN_SETTING$daycount, " days")
 message("  Crop Stage    : ", toupper(CROP_PHASE))
